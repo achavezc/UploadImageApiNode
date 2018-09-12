@@ -76,6 +76,9 @@ router.get("/", (req, res, next) => {
 
 router.post("/", upload.single('productImage'), (req, res, next) => {
   console.log("post product");
+  console.log(req.body.parametro1);;
+  console.log(req.body.parametro2);
+  console.log(req.body.parametro3);
   res.status(201).json({
     message: "Created product successfully"
   });
